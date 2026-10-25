@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "dependencies": {
+    "MASQUE": {
+      "url": "https://github.com/hkustDB/MASQUE.git",
+      "revision": "2e49283dd331df3d9e1c4790ab5b00a7589483ce",
+      "source_directory": "workspace/src/MASQUE",
+      "overlay": "systems/MASQUE/overlay",
+      "overlay_map": {
+        "CMakeLists.txt": "src/test/CMakeLists.txt",
+        "ShuffleQSort.cpp": "src/core/Sort/ShuffleQSort.cpp",
+        "test_sorting_micro.cpp": "src/test/test_sorting_micro.cpp"
+      }
+    },
+    "MP-SPDZ": {
+      "url": "https://github.com/data61/MP-SPDZ.git",
+      "revision": "58d2739ac251262c0bd6034f7fc7d0666a6b1e2c",
+      "source_directory": "workspace/src/MP-SPDZ",
+      "overlay": "systems/MP-SPDZ/overlay",
+      "overlay_map": {
+        "library.py": "Compiler/library.py",
+        "sorting.py": "Compiler/sorting.py",
+        "Programs/Source/sorting_micro_test.mpc": "Programs/Source/sorting_micro_test.mpc"
+      }
+    },
+    "Rosetta": {
+      "url": "https://github.com/LatticeX-Foundation/Rosetta.git",
+      "revision": "1126c95b4701ab1419fe47b0414aa2c2f9b38ad7",
+      "source_directory": "workspace/src/Rosetta",
+      "overlay": null,
+      "overlay_map": {}
+    },
+    "SMPCache": {
+      "url": "https://github.com/StarKirby1102/SMPCache.git",
+      "revision": "1e8a405f370cdd1b4d3e74a09aa15ac3497b38e4",
+      "source_directory": "workspace/src/SMPCache",
+      "overlay": "systems/SMPCache/overlay",
+      "overlay_map": {
+        "obliviousSort_lan_party.py": "obliviousSort_lan_party.py"
+      }
+    },
+    "Secrecy": {
+      "url": "https://github.com/CASP-Systems-BU/Secrecy.git",
+      "revision": "394ff72f4205b8fca7d421434029f117860b2660",
+      "source_directory": "workspace/src/Secrecy",
+      "overlay": "systems/Secrecy/overlay",
+      "overlay_map": {
+        "exp_sorting_micro.cpp": "src/experiments/exp_sorting_micro.cpp",
+        "relational.cpp": "src/core/relational.cpp"
+      },
+      "requires": [
+        "sql-parser"
+      ],
+      "source_mounts": {
+        "include/external-lib/sql-parser": "sql-parser"
+      }
+    },
+    "alchemy": {
+      "url": "https://github.com/vaultdb/alchemy.git",
+      "revision": "c4dd5a177666259130c6187d099d5e857507a949",
+      "source_directory": "workspace/src/alchemy",
+      "overlay": "systems/alchemy/overlay",
+      "overlay_map": {
+        "CMakeLists.txt": "src/main/cpp/test/CMakeLists.txt",
+        "emp_install.sh": "deps/emp/install.sh",
+        "setup.sh": "setup.sh",
+        "sort.cpp": "src/main/cpp/operators/sort.cpp",
+        "sorting_micro_test.cpp": "src/main/cpp/test/mpc/sorting_micro_test.cpp"
+      },
+      "requires": [
+        "emp-ot",
+        "emp-sh2pc",
+        "emp-tool",
+        "emp-zk"
+      ],
+      "source_mounts": {
+        "deps/emp/emp-ot": "emp-ot",
+        "deps/emp/emp-sh2pc": "emp-sh2pc",
+        "deps/emp/emp-tool": "emp-tool",
+        "deps/emp/emp-zk": "emp-zk"
+      }
+    },
+    "congregation": {
+      "url": "https://github.com/multiparty/congregation.git",
+      "revision": "a552856b03a64a4295792184107c4e529ca3f4ae",
+      "source_directory": "workspace/src/congregation",
+      "overlay": "systems/congregation/overlay",
+      "overlay_map": {
+        "methods.tmpl": "congregation/codegen/jiff/templates/modules/methods.tmpl",
+        "sorting_micro_test.py": "demo/plaintext/sorting_micro_test.py",
+        "sort_operator_runner.js": "demo/plaintext/sort_operator_runner.js",
+        "write_config.py": null
+      }
+    },
+    "jiff": {
+      "url": "https://github.com/multiparty/jiff.git",
+      "revision": "f5a22d8e84e1585cf368baa7aaa2f7ffd0fee3b4",
+      "source_directory": "workspace/src/jiff",
+      "overlay": null,
+      "overlay_map": {}
+    },
+    "liturgy": {
+      "url": "https://github.com/multiparty/liturgy.git",
+      "revision": "d478ffd428f1c2d38e88036f632ac5a2ca088d0c",
+      "source_directory": "workspace/src/liturgy",
+      "overlay": null,
+      "overlay_map": {}
+    },
+    "mpc4j": {
+      "url": "https://github.com/alibaba-edu/mpc4j.git",
+      "revision": "ea3b9aa99389adbe6219b0b909d2cc39cacad2bd",
+      "source_directory": "workspace/src/mpc4j",
+      "overlay": "systems/mpc4j/overlay",
+      "overlay_map": {
+        "PgSortLanParty.java": "mpc4j-work-scape/scape-s3pc-opf/src/test/java/edu/alibaba/mpc4j/work/scape/s3pc/opf/pgsort/PgSortLanParty.java",
+        "BitonicPgSortParty.java": "mpc4j-work-scape/scape-s3pc-opf/src/main/java/edu/alibaba/mpc4j/work/scape/s3pc/opf/pgsort/bitonic/BitonicPgSortParty.java",
+        "PermutableBitonicSorter.java": "mpc4j-common-circuit/src/main/java/edu/alibaba/mpc4j/common/circuit/z2/psorter/bitonic/PermutableBitonicSorter.java",
+        "QuickPgSortParty.java": "mpc4j-work-scape/scape-s3pc-opf/src/main/java/edu/alibaba/mpc4j/work/scape/s3pc/opf/pgsort/quick/QuickPgSortParty.java",
+        "RadixPgSortParty.java": "mpc4j-work-scape/scape-s3pc-opf/src/main/java/edu/alibaba/mpc4j/work/scape/s3pc/opf/pgsort/radix/RadixPgSortParty.java"
+      }
+    },
+    "orq": {
+      "url": "https://github.com/CASP-Systems-BU/orq.git",
+      "revision": "a4e4f8270fb7af5f7c8f396240e192b03586ca67",
+      "source_directory": "workspace/src/orq",
+      "overlay": "systems/orq/overlay",
+      "overlay_map": {
+        "sorting.h": "include/core/operators/sorting.h",
+        "radixsort.h": "include/core/operators/radixsort.h",
+        "quicksort.h": "include/core/operators/quicksort.h",
+        "test_sorting_micro.cpp": "tests/test_sorting_micro.cpp"
+      },
+      "profiles": {
+        "native_checked": {
+          "revision": "d2c1094b4ba053ad3a555ce8954d14c03b1ef39e",
+          "source_directory": "workspace/src/orq-native",
+          "overlay": "systems/orq/native-overlay",
+          "overlay_map": {
+            "tests/test_sorting_revision.cpp": "tests/test_sorting_revision.cpp"
+          },
+          "post_apply": "systems/orq/support/select_bitonic.py"
+        }
+      }
+    },
+    "scql": {
+      "url": "https://github.com/secretflow/scql.git",
+      "revision": "8107675dd7e7f54b6f6a0635966eeba90eab288e",
+      "source_directory": "workspace/src/scql",
+      "overlay": null,
+      "overlay_map": {}
+    },
+    "smcql": {
+      "url": "https://github.com/smcql/smcql.git",
+      "revision": "e910edfa5e4c1a045a92c56936e17558fc734530",
+      "source_directory": "workspace/src/smcql",
+      "overlay": "systems/smcql/overlay",
+      "overlay_map": {
+        "BitonicSortLib.java": "src/main/java/com/oblivm/backend/circuits/BitonicSortLib.java",
+        "BitonicSortLibTest.java": "src/test/java/com/oblivm/backend/circuits/BitonicSortLibTest.java"
+      }
+    },
+    "spu": {
+      "url": "https://github.com/secretflow/spu.git",
+      "revision": "ce70323db26c9921665b378de5d05e516f70ddea",
+      "source_directory": "workspace/src/spu",
+      "overlay": "systems/spu/overlay",
+      "overlay_map": {
+        "BUILD.bazel": "src/libspu/kernel/hlo/BUILD.bazel",
+        "sorting_micro_test.cc": "src/libspu/kernel/hlo/sorting_micro_test.cc",
+        "permute.cc": "src/libspu/kernel/hal/permute.cc"
+      }
+    },
+    "sql-parser": {
+      "url": "https://github.com/mfaisal97/sql-parser.git",
+      "revision": "e724de72eb487b16f51c4dec692f86e260ffba36",
+      "source_directory": "workspace/src/sql-parser",
+      "overlay": null,
+      "overlay_map": {}
+    },
+    "emp-zk": {
+      "url": "https://github.com/emp-toolkit/emp-zk.git",
+      "revision": "73ab193a923d4c122be5a4f6bc1fe4f617966b02",
+      "source_directory": "workspace/src/emp-zk",
+      "overlay": null,
+      "overlay_map": {}
+    },
+    "emp-tool": {
+      "url": "https://github.com/emp-toolkit/emp-tool.git",
+      "revision": "11093a7d2160e7e7a4dcae3ffd9e6935bf2b8c1c",
+      "source_directory": "workspace/src/emp-tool",
+      "overlay": null,
+      "overlay_map": {}
+    },
+    "emp-sh2pc": {
+      "url": "https://github.com/emp-toolkit/emp-sh2pc.git",
+      "revision": "1fd0101e77c1dc008ab07288ec49c62fa0c5546c",
+      "source_directory": "workspace/src/emp-sh2pc",
+      "overlay": null,
+      "overlay_map": {}
+    },
+    "emp-ot": {
+      "url": "https://github.com/emp-toolkit/emp-ot.git",
+      "revision": "52b32c8371c09c1567e3d650c0f0adfbb229a270",
+      "source_directory": "workspace/src/emp-ot",
+      "overlay": null,
+      "overlay_map": {}
+    }
+  },
+  "runtime_packages": {
+    "jiff-mpc": "1.0.0",
+    "tensorflow-for-SMPCache": "1.14.0",
+    "numpy-for-SMPCache": "1.18.5"
+  }
+}

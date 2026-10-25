@@ -1,0 +1,13 @@
+The MIT license at the repository root applies to original DataFedSort
+framework code. It does not replace the licenses of upstream systems,
+modified upstream files, or separately obtained benchmark tools.
+
+Files under systems/ that reproduce or modify upstream implementation code
+remain subject to their upstream copyright and license notices. Dependency
+revisions, overlay mappings, and available license notices are documented
+under dependencies/.
+
+TPC-H is a benchmark of the Transaction Processing Performance Council.
+Obtain the official dbgen tools separately and follow their terms. This
+repository does not redistribute dbgen sources, generated LINEITEM tables,
+or third-party Git histories.

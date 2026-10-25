@@ -1,0 +1,10 @@
+{
+  "workers": ["party0", "party1", "party2", "party3"],
+  "ssh_user": "root",
+  "ssh_key": "/run/benchmark-ssh/id_ed25519",
+  "ssh_options": ["BatchMode=yes", "StrictHostKeyChecking=accept-new", "UserKnownHostsFile=/run/benchmark-ssh/known_hosts", "ConnectTimeout=10", "ServerAliveInterval=20"],
+  "remote_workspace": "/work/datafedsort",
+  "timeout_seconds": 3600,
+  "sudo": false,
+  "input_store": "workspace/data/tpch-sf1"
+}

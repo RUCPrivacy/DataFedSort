@@ -1,0 +1,6 @@
+.git
+workspace
+outputs
+**/__pycache__
+**/*.pyc
+reference_results

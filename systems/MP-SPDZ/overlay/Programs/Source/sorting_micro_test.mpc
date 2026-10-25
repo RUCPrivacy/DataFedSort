@@ -1,0 +1,87 @@
+import csv
+import os
+from Compiler.compilerLib import Compiler
+from Compiler.library import print_ln, start_timer, stop_timer, check_point, for_range
+from Compiler.types import cint
+
+
+usage = "usage: %prog [options]"
+compiler = Compiler(usage=usage)
+compiler.parser.add_option("--input", dest="input_file")
+compiler.parser.add_option("--rows", dest="rows", type="int")
+compiler.parser.add_option("--cols", dest="cols", type="int")
+compiler.parser.add_option("--sort-col", dest="sort_col", type="int", default=0)
+compiler.parser.add_option("--algorithm", dest="algorithm", default="radix")
+compiler.parser.add_option("--n-bits", dest="n_bits", type="int", default=None)
+compiler.parser.add_option("--player", dest="player", type="int", default=0)
+compiler.parse_args()
+
+if not compiler.options.input_file:
+    compiler.parser.error("--input required")
+if compiler.options.rows is None:
+    compiler.parser.error("--rows required")
+if compiler.options.cols is None:
+    compiler.parser.error("--cols required")
+if compiler.options.sort_col < 0 or compiler.options.sort_col >= compiler.options.cols:
+    compiler.parser.error("--sort-col must satisfy 0 <= sort-col < cols")
+if compiler.options.algorithm not in ("radix", "batcher"):
+    compiler.parser.error("--algorithm must be radix or batcher")
+
+
+def read_matrix(path, rows, cols):
+    matrix = []
+    with open(path, newline="") as f:
+        sample = f.read(4096)
+        f.seek(0)
+        dialect = csv.Sniffer().sniff(sample, delimiters=" ,\t")
+        reader = csv.reader(f, dialect)
+        for row in reader:
+            if not row:
+                continue
+            values = [int(x) for x in row if x != ""]
+            if len(values) != cols:
+                raise ValueError("expected %d columns in %s, got %d" % (cols, path, len(values)))
+            matrix.append(values)
+    if len(matrix) != rows:
+        raise ValueError("expected %d rows in %s, got %d" % (rows, path, len(matrix)))
+    return matrix
+
+
+@compiler.register_function("sorting_micro_test")
+def main():
+    rows = compiler.options.rows
+    cols = compiler.options.cols
+    sort_col = compiler.options.sort_col
+    n_bits = compiler.options.n_bits
+    algorithm = compiler.options.algorithm
+    player = compiler.options.player
+    input_file = os.path.abspath(compiler.options.input_file)
+    data = read_matrix(input_file, rows, cols)
+    table = compiler.sint.input_tensor_via(
+        player, data, shape=(rows, cols),
+        binary=bool(compiler.options.binary))
+    print_ln("SORT_CONFIG rows=%s cols=%s sort_col=%s algorithm=%s n_bits=%s input=%s",
+             rows, cols, sort_col, algorithm, n_bits or -1, input_file)
+    check_point()
+    print_ln("SORT_CALL_BEGIN timer=1")
+    start_timer(1)
+    if algorithm == "batcher":
+        table.sort(key_indices=(sort_col,), batcher=True)
+    else:
+        table.sort(key_indices=(sort_col,), n_bits=n_bits)
+    check_point()
+    stop_timer(1)
+    print_ln("SORT_CALL_END timer=1")
+    print_ln("SORT_FIRST_KEY=%s", table[0][sort_col].reveal())
+    print_ln("SORT_LAST_KEY=%s", table[rows - 1][sort_col].reveal())
+    # Reconstruct all tuples after the measured sorting/checking window.
+    opened = cint.Array(rows * cols)
+    opened.assign_vector(table.get_vector().reveal())
+    @for_range(rows)
+    def emit_row(i):
+        print_ln("SORT_ROW " + " ".join(["%s"] * cols),
+                 *[opened[i * cols + j] for j in range(cols)])
+
+
+if __name__ == "__main__":
+    compiler.compile_func()

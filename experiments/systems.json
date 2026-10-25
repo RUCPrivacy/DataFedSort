@@ -1,0 +1,12 @@
+{
+  "smcql": {"name": "SMCQL", "algorithms": ["bitonic"], "SH": 2},
+  "Secrecy": {"name": "Secrecy", "algorithms": ["bitonic"], "SH": 3, "fixed_key_type": "int64"},
+  "alchemy": {"name": "Alchemy", "algorithms": ["bitonic"], "SH": 2, "minimum_key_bits": 32},
+  "orq": {"name": "ORQ", "algorithms": ["bitonic", "radix", "quick"], "SH": 3, "MAL": 4},
+  "mpc4j": {"name": "Scape", "algorithms": ["bitonic", "radix", "quick"], "SH": 3, "MAL": 3},
+  "MASQUE": {"name": "MASQUE", "algorithms": ["bitonic", "quick"], "SH": 2, "max_keys": 1, "input_types": ["int8", "int32"], "minimum_key_bits": 32},
+  "congregation": {"name": "Conclave", "algorithms": ["odd_even"], "SH": 3, "max_keys": 1},
+  "SMPCache": {"name": "SMPCache", "algorithms": ["odd_even"], "SH": 3, "max_keys": 1},
+  "MP-SPDZ": {"name": "MP-SPDZ", "algorithms": ["odd_even", "radix"], "SH": 3, "MAL": 3, "max_keys": 1},
+  "spu": {"name": "SCQL", "algorithms": ["odd_even", "radix", "quick"], "SH": 3}
+}

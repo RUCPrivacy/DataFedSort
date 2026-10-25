@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "files": [
+    {
+      "system": "alchemy",
+      "profile": "base",
+      "file": "systems/alchemy/overlay/CMakeLists.txt",
+      "destination": "src/main/cpp/test/CMakeLists.txt",
+      "role": "source-overlay",
+      "sha256": "6b8b8a754ba250f1db847851b1fd5d604d41415062d01372e0889af06c4cb77f"
+    },
+    {
+      "system": "alchemy",
+      "profile": "base",
+      "file": "systems/alchemy/overlay/emp_install.sh",
+      "destination": "deps/emp/install.sh",
+      "role": "source-overlay",
+      "sha256": "97f37b4659a30ea46808e3620de1adbc9706b20e5901eae24c92dbc1f0d232ca"
+    },
+    {
+      "system": "alchemy",
+      "profile": "base",
+      "file": "systems/alchemy/overlay/setup.sh",
+      "destination": "setup.sh",
+      "role": "source-overlay",
+      "sha256": "ad8bbb29f0d848ee540d76fda3a57ec448de6dce7c701bc46c57932191bc654d"
+    },
+    {
+      "system": "alchemy",
+      "profile": "base",
+      "file": "systems/alchemy/overlay/sort.cpp",
+      "destination": "src/main/cpp/operators/sort.cpp",
+      "role": "source-overlay",
+      "sha256": "04d5b45d270fcec576bae8d485d94970123061c07cf8ef6ed9dc736f29089a1f"
+    },
+    {
+      "system": "alchemy",
+      "profile": "base",
+      "file": "systems/alchemy/overlay/sorting_micro_test.cpp",
+      "destination": "src/main/cpp/test/mpc/sorting_micro_test.cpp",
+      "role": "source-overlay",
+      "sha256": "ad38679a513941ced41687481a3a02407a2a6d67499fc71ebddbb52dbfb9bea0"
+    },
+    {
+      "system": "congregation",
+      "profile": "base",
+      "file": "systems/congregation/overlay/methods.tmpl",
+      "destination": "congregation/codegen/jiff/templates/modules/methods.tmpl",
+      "role": "source-overlay",
+      "sha256": "764eb2e319bdc7c983191fcc247d4b576cdaeb4471d03cd3446b37ac73bc832a"
+    },
+    {
+      "system": "congregation",
+      "profile": "base",
+      "file": "systems/congregation/overlay/sorting_micro_test.py",
+      "destination": "demo/plaintext/sorting_micro_test.py",
+      "role": "source-overlay",
+      "sha256": "04285d3ef9d613d538d69e9ed5e480afe480d546c2770355992f717783cbbede"
+    },
+    {
+      "system": "congregation",
+      "profile": "base",
+      "file": "systems/congregation/overlay/sort_operator_runner.js",
+      "destination": "demo/plaintext/sort_operator_runner.js",
+      "role": "source-overlay",
+      "sha256": "06d6ba154c29abeb911363db0873ab58d9ba5fbbfab93f566aca01aee3d28370"
+    },
+    {
+      "system": "congregation",
+      "profile": "base",
+      "file": "systems/congregation/overlay/write_config.py",
+      "destination": null,
+      "role": "runtime-helper",
+      "sha256": "59ca3f5897892054bff72fa3182efd8245a05f5a2f3526d7b5dfb67e683962ed"
+    },
+    {
+      "system": "MASQUE",
+      "profile": "base",
+      "file": "systems/MASQUE/overlay/CMakeLists.txt",
+      "destination": "src/test/CMakeLists.txt",
+      "role": "source-overlay",
+      "sha256": "b55c3065fa8d7d207142d5009c710eb8e0c30dd9ab7c45f019cb36530e6dd36f"
+    },
+    {
+      "system": "MASQUE",
+      "profile": "base",
+      "file": "systems/MASQUE/overlay/ShuffleQSort.cpp",
+      "destination": "src/core/Sort/ShuffleQSort.cpp",
+      "role": "source-overlay",
+      "sha256": "20be837d5b2723e94237a805f66880f8958f3e60695690b0e4501454440601f2"
+    },
+    {
+      "system": "MASQUE",
+      "profile": "base",
+      "file": "systems/MASQUE/overlay/test_sorting_micro.cpp",
+      "destination": "src/test/test_sorting_micro.cpp",
+      "role": "source-overlay",
+      "sha256": "104d31b66760e40555835a5c715f1cd71324284c85b8e6e6405ed7bace44443b"
+    },
+    {
+      "system": "MP-SPDZ",
+      "profile": "base",
+      "file": "systems/MP-SPDZ/overlay/library.py",
+      "destination": "Compiler/library.py",
+      "role": "source-overlay",
+      "sha256": "5e512b582288ba825157449027822001a8a8270c962dc984ff0780541853e53d"
+    },
+    {
+      "system": "MP-SPDZ",
+      "profile": "base",
+      "file": "systems/MP-SPDZ/overlay/sorting.py",
+      "destination": "Compiler/sorting.py",
+      "role": "source-overlay",
+      "sha256": "e39b02d1a830c55e317fdadc14722edb3336732fc5254d33e773f674935be27d"
+    },
+    {
+      "system": "MP-SPDZ",
+      "profile": "base",
+      "file": "systems/MP-SPDZ/overlay/Programs/Source/sorting_micro_test.mpc",
+      "destination": "Programs/Source/sorting_micro_test.mpc",
+      "role": "source-overlay",
+      "sha256": "aecacbab97c0687767c1283b2adfd862fb147624e93a0412e786ed6224f1970d"
+    },
+    {
+      "system": "mpc4j",
+      "profile": "base",
+      "file": "systems/mpc4j/overlay/PgSortLanParty.java",
+      "destination": "mpc4j-work-scape/scape-s3pc-opf/src/test/java/edu/alibaba/mpc4j/work/scape/s3pc/opf/pgsort/PgSortLanParty.java",
+      "role": "source-overlay",
+      "sha256": "6307d5f97eedac43cf49e1622f1a343f66de2af79ca6f2e3d95a7322f5e4c9f5"
+    },
+    {
+      "system": "mpc4j",
+      "profile": "base",
+      "file": "systems/mpc4j/overlay/BitonicPgSortParty.java",
+      "destination": "mpc4j-work-scape/scape-s3pc-opf/src/main/java/edu/alibaba/mpc4j/work/scape/s3pc/opf/pgsort/bitonic/BitonicPgSortParty.java",
+      "role": "source-overlay",
+      "sha256": "f95aef79654be5258c351a174ab9bd3fa1db49cb65ebc5c8c80516b3904af26d"
+    },
+    {
+      "system": "mpc4j",
+      "profile": "base",
+      "file": "systems/mpc4j/overlay/PermutableBitonicSorter.java",
+      "destination": "mpc4j-common-circuit/src/main/java/edu/alibaba/mpc4j/common/circuit/z2/psorter/bitonic/PermutableBitonicSorter.java",
+      "role": "source-overlay",
+      "sha256": "f0a46e61a4771973b12e28adf4b5309e53002dded3f151b7400e358ff8d56241"
+    },
+    {
+      "system": "mpc4j",
+      "profile": "base",
+      "file": "systems/mpc4j/overlay/QuickPgSortParty.java",
+      "destination": "mpc4j-work-scape/scape-s3pc-opf/src/main/java/edu/alibaba/mpc4j/work/scape/s3pc/opf/pgsort/quick/QuickPgSortParty.java",
+      "role": "source-overlay",
+      "sha256": "c63df1c29ebff972117870b16f1baf6e82ff1742afe3e0a9102528a25ab3dc6b"
+    },
+    {
+      "system": "mpc4j",
+      "profile": "base",
+      "file": "systems/mpc4j/overlay/RadixPgSortParty.java",
+      "destination": "mpc4j-work-scape/scape-s3pc-opf/src/main/java/edu/alibaba/mpc4j/work/scape/s3pc/opf/pgsort/radix/RadixPgSortParty.java",
+      "role": "source-overlay",
+      "sha256": "96be8e69e52639f3ad284cb5eeee68484ceab3908d02d9a72f0914e26a48370e"
+    },
+    {
+      "system": "orq",
+      "profile": "base",
+      "file": "systems/orq/overlay/sorting.h",
+      "destination": "include/core/operators/sorting.h",
+      "role": "source-overlay",
+      "sha256": "a7f5ad77f3e2a6f052e15fb4b134a514446307d3d84988c187076177f261255a"
+    },
+    {
+      "system": "orq",
+      "profile": "base",
+      "file": "systems/orq/overlay/radixsort.h",
+      "destination": "include/core/operators/radixsort.h",
+      "role": "source-overlay",
+      "sha256": "72dc56f6491ccb2d6bf6809f6ebfbe260b8d4b87d97030e548269ac5a78c248e"
+    },
+    {
+      "system": "orq",
+      "profile": "base",
+      "file": "systems/orq/overlay/quicksort.h",
+      "destination": "include/core/operators/quicksort.h",
+      "role": "source-overlay",
+      "sha256": "5c02d8162f7fbd4895cee8d4ad87d871ba1258d90f6b11d8bb37bbeac7a7952f"
+    },
+    {
+      "system": "orq",
+      "profile": "base",
+      "file": "systems/orq/overlay/test_sorting_micro.cpp",
+      "destination": "tests/test_sorting_micro.cpp",
+      "role": "source-overlay",
+      "sha256": "5db7742c2ae5a8d8aedcf9c11692891c792f342add7549c7b98cbe28e6d2b8b2"
+    },
+    {
+      "system": "Secrecy",
+      "profile": "base",
+      "file": "systems/Secrecy/overlay/exp_sorting_micro.cpp",
+      "destination": "src/experiments/exp_sorting_micro.cpp",
+      "role": "source-overlay",
+      "sha256": "0abcb0f149ca72d2244d41ce797e7bdc78b00e5cffcc066e9db85acf8429889a"
+    },
+    {
+      "system": "Secrecy",
+      "profile": "base",
+      "file": "systems/Secrecy/overlay/relational.cpp",
+      "destination": "src/core/relational.cpp",
+      "role": "source-overlay",
+      "sha256": "756667f84d557e28c0c137557f547fafc856b05dc78543b2f72db0afb15dfbb5"
+    },
+    {
+      "system": "smcql",
+      "profile": "base",
+      "file": "systems/smcql/overlay/BitonicSortLib.java",
+      "destination": "src/main/java/com/oblivm/backend/circuits/BitonicSortLib.java",
+      "role": "source-overlay",
+      "sha256": "bdb669653b946fee87a38f563131a28b22102500b90e9f61ea77b5472017e2cb"
+    },
+    {
+      "system": "smcql",
+      "profile": "base",
+      "file": "systems/smcql/overlay/BitonicSortLibTest.java",
+      "destination": "src/test/java/com/oblivm/backend/circuits/BitonicSortLibTest.java",
+      "role": "source-overlay",
+      "sha256": "c18048663eea23d3e22e62c10b89aeec0c91f3868f083e658fcd8b9809d52458"
+    },
+    {
+      "system": "SMPCache",
+      "profile": "base",
+      "file": "systems/SMPCache/overlay/obliviousSort_lan_party.py",
+      "destination": "obliviousSort_lan_party.py",
+      "role": "source-overlay",
+      "sha256": "01759c3d9ed5cf087055d0c72e77a04602b69778b338d3b190d5222334b45bda"
+    },
+    {
+      "system": "spu",
+      "profile": "base",
+      "file": "systems/spu/overlay/BUILD.bazel",
+      "destination": "src/libspu/kernel/hlo/BUILD.bazel",
+      "role": "source-overlay",
+      "sha256": "89446d430a3439589e5cf86ac5b757b50094808cb6abe3ff774031d851a4a468"
+    },
+    {
+      "system": "spu",
+      "profile": "base",
+      "file": "systems/spu/overlay/sorting_micro_test.cc",
+      "destination": "src/libspu/kernel/hlo/sorting_micro_test.cc",
+      "role": "source-overlay",
+      "sha256": "89d664288f5e66f1108d3e32142d2858987331dbf8ee5db5dbc128978d556fce"
+    },
+    {
+      "system": "spu",
+      "profile": "base",
+      "file": "systems/spu/overlay/permute.cc",
+      "destination": "src/libspu/kernel/hal/permute.cc",
+      "role": "source-overlay",
+      "sha256": "21f7777b14bd8e6cd0e8875a2924e99c0ac1e9e164134709bd6fdd25eba03a4c"
+    },
+    {
+      "system": "orq",
+      "profile": "native_checked",
+      "file": "systems/orq/native-overlay/tests/test_sorting_revision.cpp",
+      "destination": "tests/test_sorting_revision.cpp",
+      "role": "source-overlay",
+      "sha256": "63ad999f2ca34149728e8882d35215ba17e5ca5a5cb28984a3c3039a6385cb04"
+    }
+  ]
+}

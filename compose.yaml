@@ -1,0 +1,41 @@
+x-worker: &worker
+  build:
+    context: .
+    dockerfile: containers/Dockerfile
+  image: datafedsort-worker:local
+  cap_add: [NET_ADMIN]
+  volumes:
+    - ./workspace/local_cluster:/input-keys:ro
+    - .:/artifact:ro
+  networks: [benchmark]
+  working_dir: /work/datafedsort
+
+services:
+  party0:
+    <<: *worker
+    hostname: party0
+  party1:
+    <<: *worker
+    hostname: party1
+  party2:
+    <<: *worker
+    hostname: party2
+  party3:
+    <<: *worker
+    hostname: party3
+  controller:
+    <<: *worker
+    hostname: controller
+    working_dir: /artifact
+    volumes:
+      - ./workspace/local_cluster:/input-keys:ro
+      - .:/artifact:ro
+      - ./workspace:/artifact/workspace
+      - ./outputs:/artifact/outputs
+    command: [bash]
+    stdin_open: true
+    tty: true
+
+networks:
+  benchmark:
+    driver: bridge

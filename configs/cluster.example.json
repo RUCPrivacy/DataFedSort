@@ -1,0 +1,10 @@
+{
+  "workers": ["party0.example.org", "party1.example.org", "party2.example.org", "party3.example.org"],
+  "ssh_user": "benchmark",
+  "ssh_key": "~/.ssh/benchmark_key",
+  "ssh_options": ["BatchMode=yes", "StrictHostKeyChecking=yes", "ConnectTimeout=10", "ServerAliveInterval=20"],
+  "remote_workspace": "/home/benchmark/datafedsort-work",
+  "timeout_seconds": 3600,
+  "sudo": true,
+  "input_store": "workspace/data/tpch-sf1"
+}

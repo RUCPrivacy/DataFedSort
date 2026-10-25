@@ -1,0 +1,4 @@
+# The controller and TPC-H preparation use Python's standard library.
+# NumPy is used by public-input validation tests and Python input readers.
+# Native systems manage their own isolated dependencies and toolchains.
+numpy>=1.24,<2
